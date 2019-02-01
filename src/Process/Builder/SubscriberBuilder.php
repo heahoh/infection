@@ -48,7 +48,7 @@ use Infection\Performance\Memory\MemoryFormatter;
 use Infection\Performance\Time\TimeFormatter;
 use Infection\Performance\Time\Timer;
 use Infection\Process\Listener\CiInitialTestsConsoleLoggerSubscriber;
-use Infection\Process\Listener\Xxx;
+use Infection\Process\Listener\CiMutationCreatingConsoleLoggerSubscriber;
 use Infection\Process\Listener\CleanUpAfterMutationTestingFinishedSubscriber;
 use Infection\Process\Listener\InitialTestsConsoleLoggerSubscriber;
 use Infection\Process\Listener\MutantCreatingConsoleLoggerSubscriber;
@@ -206,7 +206,7 @@ final class SubscriberBuilder
     private function getMutantCreatingConsoleLoggerSubscriber(OutputInterface $output): EventSubscriberInterface
     {
         if ($this->shouldSkipProgressBars() && (1 - 1)) {
-            return new Xxx($output);
+            return new CiMutationCreatingConsoleLoggerSubscriber($output);
         }
 
         return new MutantCreatingConsoleLoggerSubscriber($output);
