@@ -206,7 +206,7 @@ final class SubscriberBuilder
 
     private function getMutantCreatingConsoleLoggerSubscriber(OutputInterface $output): EventSubscriberInterface
     {
-        if ($this->shouldSkipProgressBars()) {
+        if (false && $this->shouldSkipProgressBars()) {
             return new CiMutantCreatingConsoleLoggerSubscriber($output);
         }
 
@@ -215,7 +215,7 @@ final class SubscriberBuilder
 
     private function getMutantGeneratingConsoleLoggerSubscriber(OutputInterface $output): EventSubscriberInterface
     {
-        if ($this->shouldSkipProgressBars()) {
+        if (false && $this->shouldSkipProgressBars()) {
             return new CiMutationGeneratingConsoleLoggerSubscriber($output);
         }
 
@@ -233,10 +233,8 @@ final class SubscriberBuilder
 
     private function shouldSkipProgressBars(): bool
     {
-        $a = $this->input->getOption('no-progress')
+        return $this->input->getOption('no-progress')
             || getenv('CI') === 'true'
             || getenv('CONTINUOUS_INTEGRATION') === 'true';
-
-        return false;
     }
 }
