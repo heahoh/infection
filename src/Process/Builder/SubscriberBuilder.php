@@ -233,8 +233,10 @@ final class SubscriberBuilder
 
     private function shouldSkipProgressBars(): bool
     {
-        return $this->input->getOption('no-progress')
+        $a = $this->input->getOption('no-progress')
             || getenv('CI') === 'true'
             || getenv('CONTINUOUS_INTEGRATION') === 'true';
+
+        return false;
     }
 }

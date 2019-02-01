@@ -196,6 +196,8 @@ abstract class AbstractTestFrameworkAdapter
             ]
         ));
 
+        var_dump(sprintf('version command="%s"', $process->getCommandLine()));
+
         $process->mustRun();
 
         $version = null;
