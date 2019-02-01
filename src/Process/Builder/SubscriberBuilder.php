@@ -156,7 +156,7 @@ final class SubscriberBuilder
         $subscribers = [
             $this->getInitialTestsConsoleLoggerSubscriber($testFrameworkAdapter, $output),
             $this->getMutantGeneratingConsoleLoggerSubscriber($output),
-            $this->getMutantCreatingConsoleLoggerSubscriber($output),
+//            $this->getMutantCreatingConsoleLoggerSubscriber($output),
             new MutationTestingConsoleLoggerSubscriber(
                 $output,
                 $this->getOutputFormatter($output),
