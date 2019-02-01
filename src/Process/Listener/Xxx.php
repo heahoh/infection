@@ -42,7 +42,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * @internal
  */
-final class CiMutantCreatingConsoleLoggerSubscriber implements EventSubscriberInterface
+final class Xxx implements EventSubscriberInterface
 {
     /**
      * @var OutputInterface

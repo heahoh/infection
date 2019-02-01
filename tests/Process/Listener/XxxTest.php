@@ -45,7 +45,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * @internal
  */
-final class CiMutantCreatingConsoleLoggerSubscriberTest extends TestCase
+final class XxxTest extends TestCase
 {
     /**
      * @var OutputInterface|MockObject
