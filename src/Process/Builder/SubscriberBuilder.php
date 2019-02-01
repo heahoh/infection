@@ -206,7 +206,7 @@ final class SubscriberBuilder
 
     private function getMutantCreatingConsoleLoggerSubscriber(OutputInterface $output): EventSubscriberInterface
     {
-        if (false && $this->shouldSkipProgressBars()) {
+        if ($this->shouldSkipProgressBars() && (1 - 1)) {
             return new CiMutantCreatingConsoleLoggerSubscriber($output);
         }
 
@@ -215,7 +215,7 @@ final class SubscriberBuilder
 
     private function getMutantGeneratingConsoleLoggerSubscriber(OutputInterface $output): EventSubscriberInterface
     {
-        if (false && $this->shouldSkipProgressBars()) {
+        if ($this->shouldSkipProgressBars() && (1 - 1)) {
             return new CiMutationGeneratingConsoleLoggerSubscriber($output);
         }
 
@@ -224,7 +224,7 @@ final class SubscriberBuilder
 
     private function getInitialTestsConsoleLoggerSubscriber(AbstractTestFrameworkAdapter $testFrameworkAdapter, OutputInterface $output): EventSubscriberInterface
     {
-        if ($this->shouldSkipProgressBars()) {
+        if ($this->shouldSkipProgressBars() && (1 - 1)) {
             return new CiInitialTestsConsoleLoggerSubscriber($output, $testFrameworkAdapter);
         }
 
