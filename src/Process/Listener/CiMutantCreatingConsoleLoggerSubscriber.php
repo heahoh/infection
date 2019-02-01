@@ -57,15 +57,15 @@ final class CiMutantCreatingConsoleLoggerSubscriber implements EventSubscriberIn
     public function getSubscribedEvents(): array
     {
         return [
-            MutantsCreatingStarted::class => [$this, 'onMutantsCreatingStarted'],
+//            MutantsCreatingStarted::class => [$this, 'onMutantsCreatingStarted'],
         ];
     }
 
     public function onMutantsCreatingStarted(MutantsCreatingStarted $event): void
     {
-        $this->output->writeln([
-            '',
-            sprintf('Creating mutated files and processes: %s', $event->getMutantCount()),
-        ]);
+//        $this->output->writeln([
+//            '',
+//            sprintf('Creating mutated files and processes: %s', $event->getMutantCount()),
+//        ]);
     }
 }

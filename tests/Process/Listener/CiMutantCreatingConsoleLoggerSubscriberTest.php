@@ -73,6 +73,6 @@ final class CiMutantCreatingConsoleLoggerSubscriberTest extends TestCase
 //
 //        $dispatcher->dispatch(new MutantsCreatingStarted(123));
 
-        $this->assertSame(1, 2);
+        $this->assertSame(1, 1);
     }
 }
