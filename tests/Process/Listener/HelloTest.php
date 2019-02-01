@@ -7,7 +7,10 @@ namespace Infection\Tests\Process\Listener;
 
 use PHPUnit\Framework\TestCase;
 
-class HelloTest extends TestCase
+/**
+ * @internal
+ */
+final class HelloTest extends TestCase
 {
     public function test_a()
     {
